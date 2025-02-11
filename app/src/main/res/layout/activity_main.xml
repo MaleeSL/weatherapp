@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg2"
+    tools:context=".MainActivity">
+
+        <!-- City TextView -->
+        <TextView
+            android:id="@+id/textViewcity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:text="City"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Temperature TextView -->
+        <TextView
+            android:id="@+id/textViewtemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="0°"
+            android:textColor="#ffbf00"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewcity" />
+
+        <!-- Description TextView -->
+
+        <!-- Wind Speed TextView -->
+
+        <!-- Button Group (Two LinearLayouts) -->
+        <TextView
+            android:id="@+id/textViewdescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Description"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.488"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewtemp" />
+
+        <TextView
+            android:id="@+id/textViewwind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Wind Speed"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewdescription" />
+
+        <LinearLayout
+            android:id="@+id/buttonGroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+                <!-- First Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                        <Button
+                            android:id="@+id/buttonNewYork"
+                            android:layout_width="0dp"
+                            android:layout_height="56dp"
+                            android:layout_margin="4dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="#00BCD4"
+                            android:text="New York"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                        <ImageView
+                            android:id="@+id/imageViewNewYork"
+                            android:layout_width="25dp"
+                            android:layout_height="38dp"
+                            app:srcCompat="@drawable/result"
+                           />
+
+                        <Button
+                            android:id="@+id/buttonTokyo"
+                            android:layout_width="0dp"
+                            android:layout_height="56dp"
+                            android:layout_margin="4dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="#00BCD4"
+                            android:text="Tokyo"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                        <ImageView
+                            android:id="@+id/imageViewTokyo"
+                            android:layout_width="25dp"
+                            android:layout_height="38dp"
+                            app:srcCompat="@drawable/result" />
+
+                </LinearLayout>
+
+                <!-- Second Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                        <Button
+                            android:id="@+id/buttonLondon"
+                            android:layout_width="0dp"
+                            android:layout_height="56dp"
+                            android:layout_margin="4dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="#00BCD4"
+                            android:text="London"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                        <ImageView
+                            android:id="@+id/imageViewLondon"
+                            android:layout_width="25dp"
+                            android:layout_height="38dp"
+                            app:srcCompat="@drawable/result" />
+
+                        <Button
+                            android:id="@+id/buttonDubai"
+                            android:layout_width="0dp"
+                            android:layout_height="56dp"
+                            android:layout_margin="4dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="#00BCD4"
+                            android:text="Dubai"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                        <ImageView
+                            android:id="@+id/imageViewDubai"
+                            android:layout_width="25dp"
+                            android:layout_height="38dp"
+                            app:srcCompat="@drawable/result" />
+                </LinearLayout>
+
+                <!-- Colombo Button -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                        <Button
+                            android:id="@+id/buttonColombo"
+                            android:layout_width="359dp"
+                            android:layout_height="56dp"
+                            android:layout_margin="4dp"
+                            android:backgroundTint="#9D04BC"
+                            android:text="Colombo"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/imageViewColombo"
+                            android:layout_width="25dp"
+                            android:layout_height="38dp"
+                            app:srcCompat="@drawable/result" />
+                </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="155dp"
+            android:layout_height="149dp"
+            app:layout_constraintBottom_toTopOf="@+id/buttonGroup"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewwind"
+            app:layout_constraintVertical_bias="0.362" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
